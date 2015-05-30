@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libvoaac
+LOCAL_MODULE := libvo-aacenc
 
 LOCAL_SRC_FILES := \
 	basic_op/basicop2.c \
@@ -31,7 +31,8 @@ LOCAL_SRC_FILES := \
 	src/stat_bits.c \
 	src/tns.c \
 	src/transform.c \
-	src/memalign.c
+	src/memalign.c \
+	common/cmnMemory.c
 
 ifeq ($(TARGET_ARCH_ABI),armeabi)
 	LOCAL_ARM_MODE := arm
